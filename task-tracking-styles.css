@@ -1,0 +1,125 @@
+/* src/styles/GanttChart.css */
+
+.gantt-container {
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.gantt-filters {
+  margin-bottom: 20px;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.view-mode-selector {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.gantt-legend {
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.gantt-legend .legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Task Status Colors */
+.completed-task .bar {
+  fill: #52c41a !important;
+}
+
+.in-progress-task .bar {
+  fill: #1890ff !important;
+}
+
+.not-started-task .bar {
+  fill: #d9d9d9 !important;
+}
+
+.delayed-task .bar {
+  fill: #faad14 !important;
+}
+
+.review-task .bar {
+  fill: #722ed1 !important;
+}
+
+.overdue-task .bar {
+  fill: #f5222d !important;
+}
+
+/* Legend color boxes */
+.completed-task {
+  background-color: #52c41a;
+}
+
+.in-progress-task {
+  background-color: #1890ff;
+}
+
+.not-started-task {
+  background-color: #d9d9d9;
+}
+
+.delayed-task {
+  background-color: #faad14;
+}
+
+.review-task {
+  background-color: #722ed1;
+}
+
+.overdue-task {
+  background-color: #f5222d;
+}
+
+/* Task bar hover styles */
+.gantt-container .bar-wrapper:hover {
+  cursor: pointer;
+}
+
+.gantt-container .bar-wrapper:hover .bar {
+  opacity: 0.8;
+}
+
+/* Task labels */
+.gantt-container .bar-label {
+  fill: #000;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .gantt-container {
+    height: 400px;
+  }
+}
